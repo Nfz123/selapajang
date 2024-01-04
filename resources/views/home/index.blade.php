@@ -4,7 +4,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('img/1.jpg') }}"
+                <img src="{{ asset('img/4.jpg') }}"
                     class="d-block w-100 img-fluid" alt="...">
             </div>
             <div class="carousel-item">
@@ -15,6 +15,11 @@
                 <img src="{{ asset('img/3.jpg') }}" class="d-block w-100 img-fluid"
                     alt="...">
             </div>
+            <div class="carousel-item">
+                <img src="{{ asset('img/1.jpg') }}" class="d-block w-100 img-fluid"
+                    alt="...">
+            </div>
+         
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -27,9 +32,9 @@
     </div>
 
 
-    {{-- DATA BERITA UNTUK KEDEPAN --}}
-{{-- 
-    <div class="row mt-2">
+  {{-- DATABERITAUNTUKKEDEPAN --}}
+
+    {{-- <div class="row mt-2">
         <div class="col-lg-12">
             <div class="trending-area fix">
                 <div class="container">
@@ -184,7 +189,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <div class="row mt-2">
         <div class="col-lg-12">
             <!--  Recent Articles start -->
@@ -194,8 +199,8 @@
                         <!-- section Tittle -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="section-tittle mb-30">
-                                    <h3>Recent Articles</h3>
+                                <div class="section-tittle mb-30" style="text-transform: lowercase;">
+                                    <h3>Link Alternatif Situs</h3>
                                 </div>
                             </div>
                         </div>
@@ -204,39 +209,41 @@
                                 <div class="recent-active dot-style">
                                     <div class="single-recent mb-100">
                                         <div class="what-img">
-                                            <img src="{!! URL::asset('assets/dist/img/photo3.jpg') !!}">
+                                            <a href="https://idm.kemendesa.go.id/rekomendasi"  target="_blank">
+                                            <img src="{!! URL::asset('assets/dist/img/photo1.jpg') !!}">
+                                            </a>
                                         </div>
-                                        <div class="what-cap">
+                                        {{-- <div class="what-cap">
                                             <span class="color1">Night party</span>
                                             <h6><a href="#">Welcome To The Best Model Winner Contest</a></h6>
+                                        </div> --}}
+                                    </div>
+                                    <div class="single-recent mb-100">
+                                        <div class="what-img">
+                                            <a href="https://www.kemendesa.go.id/"  target="_blank">
+                                            <img src="{!! URL::asset('assets/dist/img/photo2.jpg') !!}">
+                                            </a>
                                         </div>
+                                    </div>
+                                    <div class="single-recent mb-100">
+                                        <div class="what-img">
+                                            <a href="https://dashboard-ehdw.kemendesa.go.id/login"  target="_blank">
+                                            <img src="{!! URL::asset('assets/dist/img/photo31.jpg') !!}">
+                                            </a>
+                                        </div>
+                                        {{-- <div class="what-cap">
+                                            <span class="color1">Night party</span>
+                                            <h6><a href="#">Welcome To The Best Model Winner Contest</a></h6>
+                                        </div> --}}
                                     </div>
                                     <div class="single-recent mb-100">
                                         <div class="what-img">
                                             <img src="{!! URL::asset('assets/dist/img/photo3.jpg') !!}">
                                         </div>
-                                        <div class="what-cap">
+                                        {{-- <div class="what-cap">
                                             <span class="color1">Night party</span>
                                             <h6><a href="#">Welcome To The Best Model Winner Contest</a></h6>
-                                        </div>
-                                    </div>
-                                    <div class="single-recent mb-100">
-                                        <div class="what-img">
-                                            <img src="{!! URL::asset('assets/dist/img/photo3.jpg') !!}">
-                                        </div>
-                                        <div class="what-cap">
-                                            <span class="color1">Night party</span>
-                                            <h6><a href="#">Welcome To The Best Model Winner Contest</a></h6>
-                                        </div>
-                                    </div>
-                                    <div class="single-recent mb-100">
-                                        <div class="what-img">
-                                            <img src="{!! URL::asset('assets/dist/img/photo3.jpg') !!}">
-                                        </div>
-                                        <div class="what-cap">
-                                            <span class="color1">Night party</span>
-                                            <h6><a href="#">Welcome To The Best Model Winner Contest</a></h6>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -247,7 +254,7 @@
 
             <!--Recent Articles End -->
             <!--Start pagination -->
-            <div class="pagination-area pb-45 text-center">
+            {{-- <div class="pagination-area pb-45 text-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
@@ -265,14 +272,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
-    </div> --}}
+    </div> 
+
 
     {{-- END DATA BERITA UNTUK KEDEPAN --}}
 
 
-    {{--  <div class="row">
+{{-- <div class="row">
         <div class="col-lg-3 col-6">
             <div class="small-box bg-info">
                 <div class="inner">
@@ -397,7 +405,7 @@
     </style>
 @endpush
 
-@push('script')
+{{-- @push('script')
     <script>
         // JavaScript for Trending News Animation
         const newsList = document.getElementById('js-news');
@@ -432,4 +440,4 @@
         // Start the animation
         animateNews();
     </script>
-@endpush
+@endpush --}}

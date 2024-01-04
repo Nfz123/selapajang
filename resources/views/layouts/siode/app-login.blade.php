@@ -21,7 +21,7 @@
 
         <div class="card card-outline card-warning">
             <div class="card-header text-center">
-                <a href="#" class="h1"><b>Sentul</b>jaya</a>
+                <a href="#" class="h1"><b>Desa</b>Selapajang</a>
             </div>
             <div class="card-body">
                 @yield('content')

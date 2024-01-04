@@ -6,36 +6,19 @@
             <h3 class="card-title">
                 <P>LEMBAGA KARANG TARUNA</P>
             </h3>
-            {{-- <div class="card-tools">
-            <div class="input-group input-group-sm" style="width: 250px;">
-                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </div> --}}
+            <img src="{{ asset('img/selapajangkatar.jpg') }}" class="card-img-top" alt="Foto Ketua" width="100px"
+                height="900px">
         </div>
-        <div class="card-body">
+        {{-- <div class="card-body">
             <div class="container">
-                {{-- <h1 class="mt-5">Struktur Organisasi KARANG TARUNA DESA</h1> --}}
+
                 <div class="row mt-4">
-                    {{-- <div class="col-md-4 mx-auto">
-                        <div class="card">
-                            <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
-                                height="150px">
-                            <div class="card-body">
-                                <h5 class="card-title">Ketua</h5>
-                                <p class="card-text">Nama: John Doe</p>
-                                <p class="card-text">Alamat: Jalan Contoh No. 123</p>
-                            </div>
-                        </div>
-                    </div> --}}
+
+
                     <div class="col-md-4 mx-auto">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                                {{-- <i class="far fa-bookmark"></i> --}}
+
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -58,17 +41,10 @@
             </div>
             <div class="row mt-4">
                 <div class="col-md-4  mx-auto">
-                    {{-- <div class="card mb-4">
-                        <img src="path-to-your-image.jpg" class="card-img-top" alt="Foto Sekretaris">
-                        <div class="card-body">
-                            <h5 class="card-title">Sekretaris</h5>
-                            <p class="card-text">Nama: John Doe</p>
-                            <p class="card-text">Alamat: Jalan Contoh No. 123</p>
-                        </div>
-                    </div> --}}
+
                     <div class="info-box bg-warning">
                         <span class="info-box-icon">
-                            {{-- <i class="far fa-bookmark"></i> --}}
+
                             <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                 height="100px">
                         </span>
@@ -89,7 +65,7 @@
                 <div class="col-md-4  mx-auto">
                     <div class="info-box bg-warning">
                         <span class="info-box-icon">
-                            {{-- <i class="far fa-bookmark"></i> --}}
+
                             <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                 height="100px">
                         </span>
@@ -113,7 +89,7 @@
                     <div class="card mb-4">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                                {{-- <i class="far fa-bookmark"></i> --}}
+
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -136,7 +112,7 @@
                     <div class="card mb-4">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                                {{-- <i class="far fa-bookmark"></i> --}}
+
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -159,7 +135,7 @@
                     <div class="card mb-4">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                                {{-- <i class="far fa-bookmark"></i> --}}
+
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -179,7 +155,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     </div>
 @endsection

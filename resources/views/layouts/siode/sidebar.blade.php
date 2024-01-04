@@ -15,7 +15,7 @@
                 <img src="{{ url(Storage::url($desa->logo)) }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="{{ route('siode.dashboard.index') }}" class="d-block">Desa Sentul Jaya</a>
+                <a href="{{ route('siode.dashboard.index') }}" class="d-block">Desa Selapajang</a>
             </div>
         </div>
 
@@ -108,6 +108,7 @@
                 </li>
 
                 {{--  Kependudukan  --}}
+                
                 <li class="nav-item {!! request()->is(['siode/kependudukan']) || request()->is(['siode/kependudukan/*']) ? 'menu-open' : '' !!}">
                     <a href="#" class="nav-link {!! request()->is(['siode/kependudukan']) || request()->is(['siode/kependudukan/*']) ? 'active' : '' !!}">
                         <i class="nav-icon fas fa-solid fa-people-group text-info"></i>

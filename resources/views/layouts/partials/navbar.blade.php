@@ -76,11 +76,11 @@
 </header>  --}}
 
 
-<nav class="main-header navbar navbar-expand-md navbar-dark">
+<nav class="main-header navbar navbar-expand-md navbar-dark bg-purple">
     <div class="container">
         <a href="#" class="navbar-brand">
             <img src="{!! URL::asset('images/desa.png') !!}" alt="" srcset="" style="width: 30px; height: auto;">
-            <span class="brand-text font-weight-light">Desa Sentul Jaya</span>
+            <span class="brand-text font-weight-light">Desa Selapajang</span>
         </a>
 
         <!-- Navbar toggle button -->
@@ -109,6 +109,7 @@
                         <li><a class="dropdown-item" href="bpdfront">Badan Permusyawaratan Desa</a></li>
                         <li><a class="dropdown-item" href="lpmfront">Lembaga Pemberdayaan Masyarakat</a></li>
                         <li><a class="dropdown-item" href="/karangtarunafront">Karang Taruna</a></li>
+                        <li><a class="dropdown-item" href="linmasfront">LINMAS DESA</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

@@ -56,6 +56,8 @@ Route::get('/lpmfront', [HomeController::class, 'lpmfront'])->name('home.lpmfron
 Route::get('/bpdfront', [HomeController::class, 'bpdfront'])->name('home.bpdfront');
 Route::get('/pemdesfront', [HomeController::class, 'pemdesfront'])->name('home.pemdesfront');
 Route::get('/datapekerjafront', [HomeController::class, 'datapekerjafront'])->name('home.datapekerjafront');
+Route::get('/linmasfront', [HomeController::class, 'linmasfront'])->name('home.linmasfront');
+
 
 
 Route::group(['middleware' => ['guest']], function () {
@@ -152,7 +154,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'siode', 'as' => 'siode.'], 
         Route::resource('lembaga', LembagaController::class);
 
     });
-    Route::group(['middleware' => ['auth'], 'prefix' => 'kependudukan', 'as' => 'kependudukan.'], function () {
+    Route::group(['middleware' => ['auth', 'permission'], 'prefix' => 'kependudukan', 'as' => 'kependudukan.'], function () {
         Route::post('kartu-keluarga/anggota-keluarga/autocomplete-search', [KartuKeluargaAnggotaController::class, 'autocompleteSearch'])->name('kartu-keluarga.anggota-keluarga.autocomplete');
         Route::get('kartu-keluarga/kartu-keluarga/view-delete', [KartuKeluargaController::class, 'viewDelete'])->name('kartu-keluarga.view-delete');
         Route::get('kartu-keluarga/restore/{kartu_keluarga}', [KartuKeluargaController::class, 'restore'])->name('kartu-keluarga.restore');

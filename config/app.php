@@ -166,6 +166,7 @@ return [
         Laravolt\Indonesia\ServiceProvider::class,
         OwenIt\Auditing\AuditingServiceProvider::class,
         Riskihajar\Terbilang\TerbilangServiceProvider::class,
+        // Intervention\Image\ImageServiceProvider::class,
         // php artisan vendor:publish --provider "OwenIt\Auditing\AuditingServiceProvider" --tag="config"
         // php artisan vendor:publish --provider "OwenIt\Auditing\AuditingServiceProvider" --tag="migrations"
 
@@ -181,7 +182,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+      
     ],
 
     /*
@@ -239,9 +240,11 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
         'Indonesia' => Laravolt\Indonesia\Facade::class,
         'Terbilang' => Riskihajar\Terbilang\Facades\Terbilang::class,
+        // 'Image' => Intervention\Image\Facades\Image::class,
         // php artisan vendor:publish --provider="Laravolt\Indonesia\ServiceProvider"
         // php artisan migrate
         // php artisan laravolt:indonesia:seed
+       
 
     ],
 

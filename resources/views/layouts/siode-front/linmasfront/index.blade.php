@@ -4,29 +4,16 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">
-                <P>PEMERINTAH DESA</P>
+                <P>LINMAS DESA SELAPAJANG</P>
             </h3>
-            {{-- <div class="card-tools">
-            <div class="input-group input-group-sm" style="width: 250px;">
-                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </div> --}}
-        {{-- <img src="{{ $resizedImagePath }}" alt="Foto Resized" width="100px"> --}}
-
-        <img src="{{ asset('img/selapajangstruktur.jpg') }}" class="card-img-top" alt="Foto Ketua" width="100px"
-                height="650px">
+            <img src="{{ asset('img/selapajanglinmas.jpg') }}" class="card-img-top" alt="Foto Ketua" width="100px"
+            height="650px">
         </div>
-        <div class="card-body">
+        {{-- <div class="card-body">
             <div class="container">
-                
-                {{-- <h1 class="mt-5">Struktur Organisasi KARANG TARUNA DESA</h1> --}}
+                <h1 class="mt-5">Struktur Organisasi KARANG TARUNA DESA</h1>
                 <div class="row mt-4">
-                    {{-- <div class="col-md-4 mx-auto">
+                    <div class="col-md-4 mx-auto">
                         <div class="card">
                             <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                 height="150px">
@@ -36,14 +23,14 @@
                                 <p class="card-text">Alamat: Jalan Contoh No. 123</p>
                             </div>
                         </div>
-                    </div> --}}
-                    {{-- <div class="col-md-4 mx-auto">
-                        <span class="info-box-icon">
-                  
-                        
-                        </span>
+                    </div>
+                    <div class="col-md-4 mx-auto">
                         <div class="info-box bg-warning">
+                            <span class="info-box-icon">
                           
+                                <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
+                                    height="100px">
+                            </span>
 
                             <div class="info-box-content">
                                 <span class="info-box-text">Ketua</span>
@@ -58,13 +45,15 @@
 
                         </div>
 
-                    </div> --}}
+                    </div>
                 </div>
             </div>
-            {{-- <div class="row mt-4">
+            <div class="row mt-4">
                 <div class="col-md-4  mx-auto">
+                 
                     <div class="info-box bg-warning">
                         <span class="info-box-icon">
+                      
                             <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                 height="100px">
                         </span>
@@ -85,6 +74,7 @@
                 <div class="col-md-4  mx-auto">
                     <div class="info-box bg-warning">
                         <span class="info-box-icon">
+                    
                             <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                 height="100px">
                         </span>
@@ -102,13 +92,13 @@
 
                     </div>
                 </div>
-            </div> --}}
-            {{-- <div class="row mt-4">
+            </div>
+            <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                             
+                         
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -131,7 +121,7 @@
                     <div class="card mb-4">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                        
+                     
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -154,7 +144,7 @@
                     <div class="card mb-4">
                         <div class="info-box bg-warning">
                             <span class="info-box-icon">
-                        
+                            
                                 <img src="{{ asset('img/icon2.png') }}" class="card-img-top" alt="Foto Ketua" width="100px"
                                     height="100px">
                             </span>
@@ -173,10 +163,10 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
-        </div>
+            </div>
+        </div> --}}
     </div>
-    </div>
+    {{-- </div> --}}
 @endsection
 @push('scripts')
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">

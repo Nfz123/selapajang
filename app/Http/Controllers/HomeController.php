@@ -63,4 +63,8 @@ class HomeController extends Controller
     {
         return view('layouts.siode-front.datapekerjafront.index');
     }
+    public function linmasfront()
+    {
+        return view('layouts.siode-front.linmasfront.index');
+    }
 }
