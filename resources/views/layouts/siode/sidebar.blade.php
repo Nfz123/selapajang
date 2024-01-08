@@ -221,6 +221,16 @@
                                 <p>Arsip Desa</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('siode.buku.kearsipan.index') }}"
+                                class="nav-link {!! request()->is(['siode/bukuadministrasidesa/kearsipan']) ||
+                                request()->is(['siode/bukuadministrasidesa/kearsipan/*'])
+                                    ? 'active'
+                                    : '' !!}">
+                                <i class="far fa-circle nav-icon text-red"></i>
+                                <p>Arsip Desa</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
