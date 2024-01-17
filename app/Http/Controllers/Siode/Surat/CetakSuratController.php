@@ -14,7 +14,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
-
+// use Intervention\Image\Facades\Image;
 class CetakSuratController extends Controller
 {
     public function index()

@@ -10,7 +10,7 @@ use App\Http\Requests\Auth\LoginRequest;
 class LoginController extends Controller
 {
     protected $redirectTo = '/login-admin-siode';
-    
+
     public function __construct()
     {
         $this->redirectTo = redirect('login-admin-siode');
@@ -45,18 +45,20 @@ class LoginController extends Controller
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
 
         Auth::login($user);
-
+        // Tambahkan logika berikut untuk menentukan destinasi setelah login
+        // Tambahkan logika berikut untuk menentukan destinasi setelah login berdasarkan peran
+        // if ($user->role === 'admin') {
+        //     return redirect()
+        //         ->to('admin-dashboard')
+        //         ->with('success', 'Anda berhasil login!');
+        // } else {
+        //     return redirect()
+        //         ->to('user-dashboard')
+        //         ->with('success', 'Anda berhasil login!');
+        // }
         return $this->authenticated($request, $user)->redirectTo = redirect('siode/dashboard')->with('success', 'Anda berhasil login !');
     }
 
-    /**
-     * Handle response after user authenticated
-     *
-     * @param Request $request
-     * @param Auth $user
-     *
-     * @return \Illuminate\Http\Response
-     */
     protected function authenticated(Request $request, $user)
     {
         return redirect()->intended();

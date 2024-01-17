@@ -24,6 +24,7 @@ use App\Http\Controllers\Siode\bukuadministrasidesa\Umum\PeraturandesaController
 use App\Http\Controllers\Siode\bukuadministrasidesa\Umum\BukulembaranController;
 use App\Http\Controllers\Siode\bukuadministrasidesa\Penduduk\BukuindukpendudukController;
 use App\Http\Controllers\Siode\bukuadministrasidesa\Penduduk\BukumutasipendudukController;
+use App\Http\Controllers\Siode\bukuadministrasidesa\Gagasandusun\GagasandusunController;
 
 use App\Http\Controllers\Siode\Dashboard\DashboardController;
 use App\Http\Controllers\Siode\IdentitasDesa\IdentitasDesaController;
@@ -117,11 +118,11 @@ Route::group(['middleware' => ['auth', 'permission']], function () {
     Route::resource('permissions', PermissionsController::class);
 });
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'siode', 'as' => 'siode.'], function () {
+Route::group(['middleware' => ['auth', 'permission'], 'prefix' => 'siode', 'as' => 'siode.'], function () {
     Route::resource('dashboard', DashboardController::class)->except('show', 'edit', 'update', 'create', 'destroy');
     ;
 
-    Route::group(['middleware' => ['auth'], 'prefix' => 'info-desa', 'as' => 'infodesa.'], function () {
+    Route::group(['middleware' => ['auth', 'permission'], 'prefix' => 'info-desa', 'as' => 'infodesa.'], function () {
 
         // BAGIAN RT //
 
@@ -166,7 +167,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'siode', 'as' => 'siode.'], 
         // Route::get('data-suplemen/create', [DatasuplemenController::class, 'create'])->name('data-suplemen.create');
 
     });
-    Route::group(['middleware' => ['auth'], 'prefix' => 'layanan-surat', 'as' => 'surat.'], function () {
+    Route::group(['middleware' => ['auth', 'permission'], 'prefix' => 'layanan-surat', 'as' => 'surat.'], function () {
         Route::get('/cetak-surat/{id}/{slug}/buat', [CetakSuratController::class, 'create'])->name('buat-surat');
         Route::get('/cetak-surat', [CetakSuratController::class, 'index'])->name('cetak-surat.index');
         Route::get('/cetak-surat/{cetak_surat}/edit', [CetakSuratController::class, 'edit'])->name('cetak-surat.edit');
@@ -208,12 +209,19 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'siode', 'as' => 'siode.'], 
         Route::get('kearsipan/sarpras', [BukukearsipanController::class, 'sarpras'])->name('kearsipan.sarpras.sarpras');
         Route::get('kearsipan/sarprascreate', [BukukearsipanController::class, 'sarprascreate'])->name('kearsipan.sarpras.sarprascreate');
         Route::post('kearsipan/sarprasstore', [BukukearsipanController::class, 'sarprasstore'])->name('kearsipan.sarpras.sarprasstore');
+
+        Route::get('gagasan', [GagasandusunController::class, 'index'])->name('gagasan.index');
+        Route::get('gagasan/lihat', [GagasandusunController::class, 'lihat'])->name('gagasan.lihat');
+        Route::get('create', [GagasandusunController::class, 'create'])->name('gagasan.create');
+        Route::post('gagasandusunstore', [GagasandusunController::class, 'gagasandusunstore'])->name('gagasan.gagasandusunstore');
+        Route::delete('/gagasandusun/{gagasandusun}', [GagasandusunController::class, 'destroy'])->name('siode.buku.gagasan.destroy');
+        Route::get('/gagasandusun/{gagasandusun}', [GagasandusunController::class, 'view'])->name('gagasan.view');
     });
 
     Route::group(['middleware' => ['auth'], 'prefix' => 'arsipdesa', 'as' => 'arsip-desa.'], function () {
         Route::get('kearsipan/peta', [BukukearsipanController::class, 'petalokasi'])->name('kearsipan.peta.petalokasi');
     });
-    Route::group(['middleware' => ['auth'], 'prefix' => 'statistik', 'as' => 'statistik.'], function () {
+    Route::group(['middleware' => ['auth', 'permission'], 'prefix' => 'statistik', 'as' => 'statistik.'], function () {
         Route::get('statistik', [StatistikController::class, 'index'])->name('statistik.index');
     });
 
